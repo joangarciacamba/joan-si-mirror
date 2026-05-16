@@ -1,0 +1,593 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JOAN GARCIA CAMBA</title>
+    <meta name="description" content="CIO - CTO, padre y emprendedor en Barcelona, España">
+    <link rel="canonical" href="https://joan.si">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#006a94">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Joan Garcia Camba">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:url" content="https://joan.si">
+    <meta property="og:title" content="JOAN GARCIA CAMBA">
+    <meta property="og:description" content="CIO - CTO, padre y emprendedor en Barcelona, España">
+    <meta property="og:image" content="https://joan.si/img/og-1200.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1694">
+    <meta property="og:type" content="website">
+
+    <link rel="preload" as="image" type="image/avif"
+          imagesrcset="/img/hero-800.avif 752w, /img/hero-1600.avif 1504w"
+          imagesizes="(min-width: 768px) 65vw, 100vw"
+          fetchpriority="high">
+
+    <style>
+        :root {
+            --c: #006a94;
+            --c-d: #00485e;
+            --text: #222;
+            --bg: #fff
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html, body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            max-width: 1600px;
+            margin: 0 auto
+        }
+
+        @media (min-width: 768px) {
+            .profile {
+                flex-direction: row;
+                align-items: flex-start
+            }
+        }
+
+        .photo {
+            width: 100%
+        }
+
+        @media (min-width: 768px) {
+            .photo {
+                flex: 0 1 65%;
+                max-width: 65%;
+                position: sticky;
+                top: 0;
+                align-self: flex-start
+            }
+        }
+
+        .photo__figure {
+            margin: 0
+        }
+
+        .photo__image {
+            display: block;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 752/1130
+        }
+
+        .sidebar {
+            width: 100%
+        }
+
+        @media (min-width: 768px) {
+            .sidebar {
+                flex: 1 1 35%;
+                max-width: 35%
+            }
+        }
+
+        .sidebar__inner {
+            padding: 1.25rem
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--c)
+        }
+
+        @media (min-width: 768px) {
+            .name {
+                font-size: 2.5rem
+            }
+        }
+
+        .headline {
+            font-size: 1.125rem;
+            margin: .25rem 0 1rem
+        }
+
+        .section {
+            margin-bottom: 1.5rem
+        }
+
+        .btn {
+            display: inline-block;
+            text-decoration: none;
+            background: var(--c);
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: .375rem;
+            font-weight: 600
+        }
+
+        .btn:hover {
+            background: var(--c-d)
+        }
+
+        .gallery {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem
+        }
+
+        .gallery__thumb {
+            display: block;
+            width: 64px;
+            height: 64px;
+            object-fit: cover;
+            border-radius: .25rem;
+            background: #eee
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin: 0 0 .5rem;
+            color: var(--c)
+        }
+
+        .meta {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem
+        }
+
+        .meta__item {
+            flex: 1 1 45%
+        }
+
+        blockquote.testimonial {
+            margin: 0 0 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid var(--c);
+            color: #555;
+            font-style: italic
+        }
+
+        .social {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 1rem;
+            align-items: center
+        }
+
+        .social__link {
+            color: var(--c);
+            text-decoration: none;
+            display: inline-block
+        }
+
+        .social__link:hover {
+            color: var(--c-d)
+        }
+
+        .social__link svg {
+            width: 24px;
+            height: 24px;
+            display: block
+        }
+
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
+        }
+
+        .section--gallery, .section--bio, .section--meta, .section--testimonials, .section--social {
+            content-visibility: auto;
+            contain-intrinsic-size: auto 1000px auto 600px
+        }
+
+        .gallery__link {
+            cursor: pointer
+        }
+
+        .lb {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, .92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .25s, visibility .25s
+        }
+
+        .lb--open {
+            opacity: 1;
+            visibility: visible
+        }
+
+        .lb__img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: .25rem;
+            opacity: 0;
+            transition: opacity .3s
+        }
+
+        .lb__img--loaded {
+            opacity: 1
+        }
+
+        .lb__spinner {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border: 3px solid rgba(255, 255, 255, .2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: lb-spin .7s linear infinite
+        }
+
+        .lb__spinner--hidden {
+            display: none
+        }
+
+        @keyframes lb-spin {
+            to {
+                transform: rotate(360deg)
+            }
+        }
+
+        .lb__btn {
+            position: absolute;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: .75rem;
+            opacity: .7;
+            transition: opacity .2s
+        }
+
+        .lb__btn:hover {
+            opacity: 1
+        }
+
+        .lb__close {
+            top: .75rem;
+            right: .75rem;
+            font-size: 2rem;
+            line-height: 1
+        }
+
+        .lb__prev, .lb__next {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            line-height: 1
+        }
+
+        .lb__prev {
+            left: .5rem
+        }
+
+        .lb__next {
+            right: .5rem
+        }
+
+        .lb__counter {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, .7);
+            font-size: .875rem
+        }
+    </style>
+</head>
+<body>
+<main class="profile">
+    <div class="photo">
+        <figure class="photo__figure">
+            <picture>
+                <source type="image/avif"
+                        srcset="/img/hero-800.avif 752w, /img/hero-1600.avif 1504w"
+                        sizes="(min-width: 768px) 65vw, 100vw">
+                <source type="image/webp"
+                        srcset="/img/hero-800.webp 752w, /img/hero-1600.webp 1504w"
+                        sizes="(min-width: 768px) 65vw, 100vw">
+                <img
+                        src="/img/hero-800.jpg"
+                        srcset="/img/hero-800.jpg 752w, /img/hero-1600.jpg 1504w"
+                        sizes="(min-width: 768px) 65vw, 100vw"
+                        alt="Retrato de Joan Garcia Camba"
+                        class="photo__image"
+                        width="752" height="1130"
+                        decoding="async" fetchpriority="high" loading="eager">
+            </picture>
+
+        </figure>
+    </div>
+    <div class="sidebar">
+        <div class="sidebar__inner">
+            <section class="section section--head">
+                <h1 class="name">Joan Garcia Camba</h1>
+                <h2 class="headline">CIO - CTO, padre y emprendedor en Barcelona, España</h2>
+            </section>
+
+            <section class="section">
+                <a href="/files/ResumeSPA.pdf" target="_blank" rel="noopener noreferrer"
+                   class="btn">
+                    Read my CV
+                </a>
+            </section>
+
+            <section class="section section--gallery" aria-label="Galería de fotos">
+                <ul class="gallery">
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-6-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g6-64.avif 1x, /img/gallery/g6-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g6-64.webp 1x, /img/gallery/g6-128.webp 2x">
+                            <img src="/img/gallery/g6-64.jpg"
+                                 srcset="/img/gallery/g6-64.jpg 1x, /img/gallery/g6-128.jpg 2x" alt="Foto 6"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-1-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g1-64.avif 1x, /img/gallery/g1-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g1-64.webp 1x, /img/gallery/g1-128.webp 2x">
+                            <img src="/img/gallery/g1-64.jpg"
+                                 srcset="/img/gallery/g1-64.jpg 1x, /img/gallery/g1-128.jpg 2x" alt="Foto 1"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-2-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g2-64.avif 1x, /img/gallery/g2-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g2-64.webp 1x, /img/gallery/g2-128.webp 2x">
+                            <img src="/img/gallery/g2-64.jpg"
+                                 srcset="/img/gallery/g2-64.jpg 1x, /img/gallery/g2-128.jpg 2x" alt="Foto 2"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-3-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g3-64.avif 1x, /img/gallery/g3-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g3-64.webp 1x, /img/gallery/g3-128.webp 2x">
+                            <img src="/img/gallery/g3-64.jpg"
+                                 srcset="/img/gallery/g3-64.jpg 1x, /img/gallery/g3-128.jpg 2x" alt="Foto 3"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-4-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g4-64.avif 1x, /img/gallery/g4-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g4-64.webp 1x, /img/gallery/g4-128.webp 2x">
+                            <img src="/img/gallery/g4-64.jpg"
+                                 srcset="/img/gallery/g4-64.jpg 1x, /img/gallery/g4-128.jpg 2x" alt="Foto 4"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                    <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-5-x2.jpg" class="gallery__link">
+                        <picture>
+                            <source type="image/avif" srcset="/img/gallery/g5-64.avif 1x, /img/gallery/g5-128.avif 2x">
+                            <source type="image/webp" srcset="/img/gallery/g5-64.webp 1x, /img/gallery/g5-128.webp 2x">
+                            <img src="/img/gallery/g5-64.jpg"
+                                 srcset="/img/gallery/g5-64.jpg 1x, /img/gallery/g5-128.jpg 2x" alt="Foto 5"
+                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
+                                 fetchpriority="low"></picture>
+                    </a></li>
+                </ul>
+            </section>
+
+            <section class="section section--bio">
+                <p># IT_Yes, apasionado de la informática; emprendedor y curioso. Necesito sentir que aprendo y mejoro a
+                    diario para guiar a mi equipo con el mejor criterio hacia el éxito.</p>
+                <p>Excelente visión de cliente, con foco en el éxito de los proyectos, liderando con el ejemplo y
+                    cuidando el ambiente de trabajo.</p>
+                <p>Quiero demostrar que IT puede y debe ser una palanca para impulsar el negocio: menos problemas, más
+                    soluciones y beneficios.</p>
+            </section>
+
+            <section class="section section--meta">
+                <ul class="meta">
+                    <li class="meta__item">
+                        <h3 class="subtitle">Trabajo</h3>
+                        <p><a href="https://browniespain.com" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:none">Brownie Spain</a></p>
+                    </li>
+                    <li class="meta__item">
+                        <h3 class="subtitle">Educación</h3>
+                        <p>BarcelonaTech (UPC) — School of Mathematics and Statistics</p>
+                        <p>ESADE Business School</p>
+                        <p>IESE Business School</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="section section--testimonials">
+                <h3 class="subtitle">Testimonios</h3>
+                <blockquote class="testimonial">
+                    <p>Como especialista IT, Joan ha mostrado gran capacidad analítica, entendimiento de las necesidades
+                        del cliente y habilidad para proponer e implementar soluciones innovadoras y eficaces.</p>
+                    <div class="testimonial__author"><strong>Pere Carbó De Cala</strong> — Director de Ventas Iberia y
+                        LatAm en DIAsource ImmunoA
+                    </div>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>Joan es una persona comprometida con su trabajo y con la empresa. Como Director del Departamento
+                        IT lidera los procesos de cambio tecnológico con innovación y visión estratégica.</p>
+                    <div class="testimonial__author"><strong>Carmina San Julián Ferrer</strong> — Directora de RRHH &
+                        RSC en Grupo Saona
+                    </div>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>Tuve la oportunidad de conocer a Joan durante el Master in Digital Business de ESADE. Es un gran
+                        profesional, orientado al cliente y capaz de aplicar la tecnología a la resolución de retos de
+                        negocio.</p>
+                    <div class="testimonial__author"><strong>Albert Almajano</strong> — CIO Indukern</div>
+                </blockquote>
+            </section>
+
+            <section class="section section--social">
+                <ul class="social">
+                    <li class="social__item">
+                        <a href="mailto:blah@blah.com" class="social__link" title="Envíame un mensaje"><span
+                                class="visually-hidden">Email</span>
+                            <svg viewBox="0 2 37 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                 fill="currentColor">
+                                <path d="M17.986 17.744L35.956 4.25C35.956 3 34.958 2 33.71 2H2.263C1.015 2 .017 3 .017 4.25l17.97 13.494zm0 4.04L.016 8.29l.062 21.462C.078 31 1.076 32 2.324 32h31.447c1.248 0 2.246-1 2.246-2.25l-.06-21.46-17.97 13.494z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="social__item">
+                        <a href="https://es.linkedin.com/in/joangarcia" target="_blank" rel="noopener noreferrer"
+                           class="social__link" title="LinkedIn"><span class="visually-hidden">LinkedIn</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" aria-hidden="true"
+                                 fill="currentColor">
+                                <path d="M1000 500c0 277-223 500-500 500S0 777 0 500 223 0 500 0s500 223 500 500zM375 260c-1-41-32-73-83-73-50 0-83 32-83 73s32 73 82 73h1c51 0 83-32 83-73zm-21 136H229v354h125V396zm458 166c0-114-56-187-146-187-50 0-87 30-104 75l-4-54H434c1 13 3 83 3 83v271h125V562c0-50 23-83 62-83 38 0 63 20 63 83v188h125V562z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</main>
+
+<div class="lb" id="lb" role="dialog" aria-label="Visor de fotos" aria-hidden="true">
+    <div class="lb__spinner" id="lb-spinner"></div>
+    <img class="lb__img" id="lb-img" alt="">
+    <button class="lb__btn lb__close" id="lb-close" aria-label="Cerrar">&times;</button>
+    <button class="lb__btn lb__prev" id="lb-prev" aria-label="Anterior">&#8249;</button>
+    <button class="lb__btn lb__next" id="lb-next" aria-label="Siguiente">&#8250;</button>
+    <div class="lb__counter" id="lb-counter"></div>
+</div>
+
+<script>
+    (function () {
+        var lb = document.getElementById('lb');
+        var lbImg = document.getElementById('lb-img');
+        var lbSpinner = document.getElementById('lb-spinner');
+        var lbCounter = document.getElementById('lb-counter');
+        var links = document.querySelectorAll('.gallery__link');
+        var srcs = [];
+        var alts = [];
+        var cur = 0;
+
+        for (var i = 0; i < links.length; i++) {
+            srcs.push(links[i].href);
+            alts.push(links[i].querySelector('img').alt);
+        }
+
+        function show(index) {
+            cur = (index + srcs.length) % srcs.length;
+            lbImg.classList.remove('lb__img--loaded');
+            lbSpinner.classList.remove('lb__spinner--hidden');
+            lbImg.onload = function () {
+                lbSpinner.classList.add('lb__spinner--hidden');
+                lbImg.classList.add('lb__img--loaded');
+            };
+            lbImg.src = srcs[cur];
+            lbImg.alt = alts[cur];
+            lbCounter.textContent = (cur + 1) + ' / ' + srcs.length;
+        }
+
+        function open(index) {
+            show(index);
+            lb.classList.add('lb--open');
+            lb.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function close() {
+            lb.classList.remove('lb--open');
+            lb.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        for (var j = 0; j < links.length; j++) {
+            (function (idx) {
+                links[idx].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    open(idx);
+                });
+            })(j);
+        }
+
+        document.getElementById('lb-close').addEventListener('click', close);
+        document.getElementById('lb-prev').addEventListener('click', function () {
+            show(cur - 1);
+        });
+        document.getElementById('lb-next').addEventListener('click', function () {
+            show(cur + 1);
+        });
+
+        lb.addEventListener('click', function (e) {
+            if (e.target === lb) close();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (!lb.classList.contains('lb--open')) return;
+            if (e.key === 'Escape') close();
+            else if (e.key === 'ArrowLeft') show(cur - 1);
+            else if (e.key === 'ArrowRight') show(cur + 1);
+        });
+
+        var touchX = 0;
+        lb.addEventListener('touchstart', function (e) {
+            touchX = e.changedTouches[0].clientX;
+        }, {passive: true});
+        lb.addEventListener('touchend', function (e) {
+            var dx = e.changedTouches[0].clientX - touchX;
+            if (dx > 40) show(cur - 1);
+            else if (dx < -40) show(cur + 1);
+        }, {passive: true});
+    })();
+</script>
+</body>
+</html>
