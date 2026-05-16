@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://joan.si/sitemap.xml
