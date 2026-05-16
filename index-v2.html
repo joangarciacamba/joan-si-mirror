@@ -56,15 +56,10 @@
     }
     </script>
 
-    <!-- Preconnect & preload critical assets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" type="image/avif"
           imagesrcset="/img/hero-800.avif 752w, /img/hero-1600.avif 1504w"
           imagesizes="(min-width: 768px) 42vw, 100vw"
           fetchpriority="high">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
 
     <style>
         :root {
@@ -73,30 +68,24 @@
             --accent: #9a4825;
             --accent-soft: #fdf1ec;
             --text: #1a1f2c;
-            --muted: #5b6472;
-            --border: #e6e3dc;
-            --surface: #fbf9f4;
-            --cream: #f7f4ec;
+            --muted: #6b7280;
+            --border: #e8eaed;
+            --surface: #f7f8fa;
             --bg: #fff;
-            --serif: 'Instrument Serif', "Times New Roman", Georgia, serif;
-            --sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
             --radius: 0.5rem;
-            --radius-lg: 1rem;
+            --radius-sm: 0.25rem;
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
             --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --shadow-photo: 0 30px 80px -30px rgba(26, 31, 44, 0.25);
         }
 
         * { box-sizing: border-box; }
-        html { background: var(--cream); }
         html, body { height: 100%; }
 
         body {
             margin: 0;
             background: var(--bg);
             color: var(--text);
-            font-family: var(--sans);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.55;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
@@ -105,30 +94,23 @@
         a { color: var(--c); transition: color .2s ease; }
         a:hover { color: var(--c-d); }
 
-        ::selection { background: var(--c); color: #fff; }
+        ::selection { background: var(--accent-soft); color: var(--accent); }
 
         .profile {
             display: flex;
             flex-direction: column;
             max-width: 1400px;
             margin: 0 auto;
-            background: var(--bg);
         }
 
         @media (min-width: 768px) {
             .profile {
                 flex-direction: row;
                 align-items: flex-start;
-                min-height: 100vh;
             }
         }
 
-        /* Photo column with subtle cream tint to bridge sides */
-        .photo {
-            width: 100%;
-            background: var(--cream);
-            position: relative;
-        }
+        .photo { width: 100%; }
 
         @media (min-width: 768px) {
             .photo {
@@ -137,68 +119,19 @@
                 position: sticky;
                 top: 0;
                 align-self: flex-start;
-                min-height: 100vh;
-                display: flex;
-                align-items: center;
             }
         }
 
-        .photo__figure {
-            margin: 0;
-            width: 100%;
-            position: relative;
-        }
-
-        @media (min-width: 768px) {
-            .photo__figure {
-                padding: 2rem;
-            }
-        }
+        .photo__figure { margin: 0; }
 
         .photo__image {
             display: block;
             width: 100%;
             height: auto;
             aspect-ratio: 752/1130;
-            border-radius: 4px;
         }
 
-        @media (min-width: 768px) {
-            .photo__image {
-                box-shadow: var(--shadow-photo);
-                border-radius: 2px;
-            }
-        }
-
-        /* Decorative quote on photo (desktop only) */
-        @media (min-width: 1024px) {
-            .photo__caption {
-                position: absolute;
-                bottom: 3rem;
-                left: 2rem;
-                font-family: var(--mono);
-                font-size: 0.65rem;
-                text-transform: uppercase;
-                letter-spacing: 0.18em;
-                color: var(--muted);
-                writing-mode: vertical-rl;
-                transform: rotate(180deg);
-            }
-        }
-
-        .photo__caption {
-            display: none;
-        }
-
-        @media (min-width: 1024px) {
-            .photo__caption { display: block; }
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 100%;
-            background: var(--bg);
-        }
+        .sidebar { width: 100%; }
 
         @media (min-width: 768px) {
             .sidebar {
@@ -209,66 +142,61 @@
 
         .sidebar__inner {
             padding: 2rem 1.5rem;
-            max-width: 680px;
+            max-width: 640px;
         }
 
         @media (min-width: 768px) {
             .sidebar__inner {
-                padding: 5rem 3rem 5rem 3.5rem;
+                padding: 4rem 3rem 4rem 3.5rem;
             }
         }
 
-        /* Brand tag */
+        /* Brand tag — replaces the old "# IT_Yes" awkwardness */
         .brandtag {
             display: inline-flex;
             align-items: center;
-            font-family: var(--mono);
+            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
             font-size: 0.7rem;
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--accent);
             background: var(--accent-soft);
-            padding: 0.35rem 0.7rem;
+            padding: 0.35rem 0.65rem;
             border-radius: 999px;
-            margin-bottom: 1.75rem;
+            margin-bottom: 1.5rem;
             line-height: 1;
         }
 
         .brandtag::before {
             content: '#';
-            margin-right: 0.4rem;
-            opacity: 0.55;
+            margin-right: 0.35rem;
+            opacity: 0.6;
         }
 
-        /* Name — editorial serif */
+        /* Name */
         .name {
-            font-family: var(--serif);
-            font-size: 3rem;
-            font-weight: 400;
+            font-size: 2.25rem;
+            font-weight: 700;
             margin: 0 0 0.5rem;
             color: var(--text);
-            letter-spacing: -0.01em;
-            line-height: 1;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
         }
 
         @media (min-width: 768px) {
-            .name { font-size: 4rem; }
+            .name { font-size: 3rem; }
         }
 
-        .name__accent {
-            font-style: italic;
-            color: var(--c);
-        }
+        .name__accent { color: var(--c); }
 
         /* Headline */
         .headline {
-            font-size: 1.0625rem;
+            font-size: 1.05rem;
             font-weight: 400;
             margin: 0 0 2rem;
             color: var(--muted);
             line-height: 1.5;
-            max-width: 36ch;
         }
 
         .headline strong {
@@ -277,34 +205,35 @@
         }
 
         /* Sections */
-        .section { margin-bottom: 2.75rem; }
+        .section { margin-bottom: 2.5rem; }
         .section:last-child { margin-bottom: 0; }
 
         /* CTA */
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.55rem;
+            gap: 0.5rem;
             text-decoration: none;
-            background: var(--text);
+            background: var(--c);
             color: #fff;
-            padding: 0.8rem 1.3rem;
-            border-radius: 999px;
-            font-weight: 500;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius);
+            font-weight: 600;
             font-size: 0.95rem;
             transition: all .2s ease;
-            font-family: var(--sans);
+            box-shadow: var(--shadow-sm);
         }
 
         .btn:hover {
-            background: var(--c);
+            background: var(--c-d);
             color: #fff;
             transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
 
         .btn__icon {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             transition: transform .2s ease;
         }
 
@@ -312,33 +241,26 @@
 
         /* Section heading */
         .subtitle {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.16em;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            margin: 0 0 1.25rem;
+            margin: 0 0 1rem;
             color: var(--muted);
-        }
-
-        .subtitle::before {
-            content: '— ';
-            color: var(--c);
-            margin-right: 0.25rem;
         }
 
         /* Bio */
         .section--bio p {
-            margin: 0 0 1rem;
-            font-size: 1.0625rem;
+            margin: 0 0 0.85rem;
+            font-size: 1rem;
             color: var(--text);
-            line-height: 1.65;
         }
 
         .section--bio p:last-child { margin-bottom: 0; }
 
-        .section--bio p:first-child::first-line {
-            font-weight: 500;
+        .section--bio p:first-child {
+            font-size: 1.05rem;
+            color: var(--text);
         }
 
         /* Gallery */
@@ -354,9 +276,8 @@
         .gallery__link {
             cursor: pointer;
             display: block;
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            position: relative;
         }
 
         .gallery__thumb {
@@ -364,17 +285,17 @@
             width: 64px;
             height: 64px;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: 8px;
             background: var(--border);
-            transition: transform .25s ease, box-shadow .25s ease;
+            transition: transform .2s ease, box-shadow .2s ease;
         }
 
         .gallery__link:hover .gallery__thumb {
-            transform: scale(1.04);
+            transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
 
-        /* Meta */
+        /* Meta (Trabajo / Educación) */
         .meta {
             list-style: none;
             padding: 0;
@@ -385,10 +306,9 @@
         }
 
         .meta__item p {
-            margin: 0.3rem 0;
+            margin: 0.2rem 0;
             font-size: 0.95rem;
             color: var(--text);
-            line-height: 1.5;
         }
 
         .meta__item a {
@@ -404,57 +324,40 @@
         .divider {
             border: 0;
             border-top: 1px solid var(--border);
-            margin: 0 0 2.75rem;
+            margin: 0 0 2.5rem;
         }
 
-        /* Testimonials with monogram */
+        /* Testimonials */
         blockquote.testimonial {
             margin: 0 0 1rem;
-            padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+            padding: 1.25rem 1.25rem 1.25rem 2.5rem;
             background: var(--surface);
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius);
             position: relative;
-            border: 1px solid var(--border);
+        }
+
+        blockquote.testimonial::before {
+            content: '\201C';
+            position: absolute;
+            top: 0.35rem;
+            left: 0.75rem;
+            font-size: 2.5rem;
+            color: var(--c);
+            opacity: 0.35;
+            font-family: Georgia, "Times New Roman", serif;
+            line-height: 1;
         }
 
         blockquote.testimonial p {
-            margin: 0 0 1rem;
-            font-size: 1rem;
-            color: var(--text);
-            line-height: 1.6;
-            font-family: var(--serif);
+            margin: 0 0 0.65rem;
+            font-size: 0.95rem;
+            color: #2d3748;
             font-style: italic;
-            font-weight: 400;
+            line-height: 1.5;
         }
-
-        .testimonial__byline {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .testimonial__avatar {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--mono);
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #fff;
-            background: var(--c);
-            flex-shrink: 0;
-            letter-spacing: 0.02em;
-        }
-
-        .testimonial__avatar--a { background: #c2410c; }
-        .testimonial__avatar--b { background: #047857; }
-        .testimonial__avatar--c { background: #6d28d9; }
 
         .testimonial__author {
-            font-size: 0.875rem;
+            font-size: 0.85rem;
             font-style: normal;
             color: var(--muted);
             line-height: 1.4;
@@ -463,8 +366,6 @@
         .testimonial__author strong {
             color: var(--text);
             font-weight: 600;
-            display: block;
-            font-size: 0.9rem;
         }
 
         /* Social */
@@ -483,47 +384,35 @@
             gap: 0.5rem;
             color: var(--text);
             text-decoration: none;
-            padding: 0.6rem 1rem;
+            padding: 0.55rem 0.9rem;
             border: 1px solid var(--border);
-            border-radius: 999px;
+            border-radius: var(--radius);
             font-size: 0.875rem;
             font-weight: 500;
             transition: all .2s ease;
-            background: var(--bg);
+            background: #fff;
         }
 
         .social__link:hover {
             color: var(--c);
             border-color: var(--c);
-            background: var(--bg);
+            background: rgba(0, 106, 148, 0.04);
             transform: translateY(-1px);
         }
 
         .social__link svg {
-            width: 16px;
-            height: 16px;
+            width: 18px;
+            height: 18px;
             flex-shrink: 0;
         }
 
         /* Footer */
         .footer {
-            margin-top: 3.5rem;
+            margin-top: 3rem;
             padding-top: 1.5rem;
             border-top: 1px solid var(--border);
             font-size: 0.8rem;
             color: var(--muted);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .footer__mark {
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            opacity: 0.7;
         }
 
         .visually-hidden {
@@ -543,21 +432,80 @@
             contain-intrinsic-size: auto 1000px auto 600px;
         }
 
-        /* Lightbox (unchanged) */
-        .lb { position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, .92); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
+        /* Lightbox (unchanged behaviour) */
+        .lb {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, .92);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .25s, visibility .25s;
+        }
+
         .lb--open { opacity: 1; visibility: visible; }
-        .lb__img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: .25rem; opacity: 0; transition: opacity .3s; }
+
+        .lb__img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: .25rem;
+            opacity: 0;
+            transition: opacity .3s;
+        }
+
         .lb__img--loaded { opacity: 1; }
-        .lb__spinner { position: absolute; width: 36px; height: 36px; border: 3px solid rgba(255, 255, 255, .2); border-top-color: #fff; border-radius: 50%; animation: lb-spin .7s linear infinite; }
+
+        .lb__spinner {
+            position: absolute;
+            width: 36px;
+            height: 36px;
+            border: 3px solid rgba(255, 255, 255, .2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: lb-spin .7s linear infinite;
+        }
+
         .lb__spinner--hidden { display: none; }
+
         @keyframes lb-spin { to { transform: rotate(360deg); } }
-        .lb__btn { position: absolute; background: none; border: none; color: #fff; cursor: pointer; padding: .75rem; opacity: .7; transition: opacity .2s; }
+
+        .lb__btn {
+            position: absolute;
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            padding: .75rem;
+            opacity: .7;
+            transition: opacity .2s;
+        }
+
         .lb__btn:hover { opacity: 1; }
+
         .lb__close { top: .75rem; right: .75rem; font-size: 2rem; line-height: 1; }
-        .lb__prev, .lb__next { top: 50%; transform: translateY(-50%); font-size: 2.5rem; line-height: 1; }
+
+        .lb__prev, .lb__next {
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
         .lb__prev { left: .5rem; }
         .lb__next { right: .5rem; }
-        .lb__counter { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, .7); font-size: .875rem; }
+
+        .lb__counter {
+            position: absolute;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255, 255, 255, .7);
+            font-size: .875rem;
+        }
 
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -588,7 +536,6 @@
                         width="752" height="1130"
                         decoding="async" fetchpriority="high" loading="eager">
             </picture>
-            <span class="photo__caption">Barcelona · 2026</span>
         </figure>
     </div>
 
@@ -598,7 +545,7 @@
             <section class="section section--head">
                 <div class="brandtag">IT_Yes</div>
                 <h1 class="name">Joan <span class="name__accent">Garcia Camba</span></h1>
-                <p class="headline"><strong>CIO / CTO</strong> en Barcelona. Padre, emprendedor y eternamente curioso.</p>
+                <p class="headline"><strong>CIO / CTO</strong> en Barcelona. Padre y emprendedor.</p>
 
                 <a href="/files/ResumeSPA.pdf" target="_blank" rel="noopener noreferrer" class="btn">
                     Leer mi CV
@@ -626,7 +573,7 @@
                     </li>
                     <li class="meta__item">
                         <h2 class="subtitle">Educación</h2>
-                        <p>BarcelonaTech (UPC)</p>
+                        <p>BarcelonaTech (UPC) — School of Mathematics and Statistics</p>
                         <p>ESADE Business School</p>
                         <p>IESE Business School</p>
                     </li>
@@ -701,33 +648,15 @@
                 <h2 class="subtitle">Testimonios</h2>
                 <blockquote class="testimonial">
                     <p>Como especialista IT, Joan ha mostrado gran capacidad analítica, entendimiento de las necesidades del cliente y habilidad para proponer e implementar soluciones innovadoras y eficaces.</p>
-                    <div class="testimonial__byline">
-                        <span class="testimonial__avatar testimonial__avatar--a" aria-hidden="true">PC</span>
-                        <div class="testimonial__author">
-                            <strong>Pere Carbó De Cala</strong>
-                            Director de Ventas Iberia y LatAm en DIAsource ImmunoA
-                        </div>
-                    </div>
+                    <div class="testimonial__author"><strong>Pere Carbó De Cala</strong> — Director de Ventas Iberia y LatAm en DIAsource ImmunoA</div>
                 </blockquote>
                 <blockquote class="testimonial">
                     <p>Joan es una persona comprometida con su trabajo y con la empresa. Como Director del Departamento IT lidera los procesos de cambio tecnológico con innovación y visión estratégica.</p>
-                    <div class="testimonial__byline">
-                        <span class="testimonial__avatar testimonial__avatar--b" aria-hidden="true">CS</span>
-                        <div class="testimonial__author">
-                            <strong>Carmina San Julián Ferrer</strong>
-                            Directora de RRHH &amp; RSC en Grupo Saona
-                        </div>
-                    </div>
+                    <div class="testimonial__author"><strong>Carmina San Julián Ferrer</strong> — Directora de RRHH &amp; RSC en Grupo Saona</div>
                 </blockquote>
                 <blockquote class="testimonial">
                     <p>Tuve la oportunidad de conocer a Joan durante el Master in Digital Business de ESADE. Es un gran profesional, orientado al cliente y capaz de aplicar la tecnología a la resolución de retos de negocio.</p>
-                    <div class="testimonial__byline">
-                        <span class="testimonial__avatar testimonial__avatar--c" aria-hidden="true">AA</span>
-                        <div class="testimonial__author">
-                            <strong>Albert Almajano</strong>
-                            CIO B. Braun
-                        </div>
-                    </div>
+                    <div class="testimonial__author"><strong>Albert Almajano</strong> — CIO B. Braun</div>
                 </blockquote>
             </section>
 
@@ -756,8 +685,7 @@
             </section>
 
             <footer class="footer">
-                <span>© 2026 Joan Garcia Camba</span>
-                <span class="footer__mark">Hecho en Barcelona</span>
+                <p>© 2026 Joan Garcia Camba · Barcelona</p>
             </footer>
         </div>
     </div>
