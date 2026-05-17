@@ -371,7 +371,28 @@
             color: var(--text);
         }
 
-        /* Expertise */
+        /* Value (Cómo aporto valor) */
+        .value {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .value li {
+            padding: 0.7rem 0;
+            font-size: 0.98rem;
+            line-height: 1.55;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+        }
+        .value li:last-child { border-bottom: 0; padding-bottom: 0; }
+        .value li:first-child { padding-top: 0; }
+        .value strong {
+            color: var(--c);
+            font-weight: 600;
+            margin-right: 0.3rem;
+        }
+
+        /* Expertise (kept for fallback) */
         .expertise { display: flex; flex-direction: column; gap: 1.1rem; }
 
         .expertise__group { display: flex; flex-direction: column; gap: 0.5rem; }
@@ -666,7 +687,7 @@
         }
 
         .section--gallery, .section--bio, .section--meta, .section--testimonials,
-        .section--social, .section--experience, .section--expertise,
+        .section--social, .section--experience, .section--expertise, .section--value,
         .section--education, .section--activities, .section--philosophy {
             content-visibility: auto;
             contain-intrinsic-size: auto 1000px auto 600px;
@@ -800,46 +821,13 @@
 
             <hr class="divider">
 
-            <section class="section section--expertise">
+            <section class="section section--value">
                 <h2 class="subtitle">Cómo aporto valor</h2>
-                <div class="expertise">
-                    <div class="expertise__group">
-                        <span class="expertise__label">Estrategia & dirección</span>
-                        <ul class="pills">
-                            <li>IT como palanca de negocio</li>
-                            <li>Comité de Dirección</li>
-                            <li>Roadmap tecnológico</li>
-                            <li>Visión &amp; perfil híbrido</li>
-                        </ul>
-                    </div>
-                    <div class="expertise__group">
-                        <span class="expertise__label">Construcción & liderazgo</span>
-                        <ul class="pills">
-                            <li>Departamentos IT desde cero</li>
-                            <li>Escalado de equipos</li>
-                            <li>Gestión del cambio</li>
-                            <li>Gestión de proveedores</li>
-                        </ul>
-                    </div>
-                    <div class="expertise__group">
-                        <span class="expertise__label">Transformación digital</span>
-                        <ul class="pills">
-                            <li>Omnicanalidad</li>
-                            <li>Migración cloud</li>
-                            <li>Plataformas core</li>
-                            <li>Datos para decisión</li>
-                        </ul>
-                    </div>
-                    <div class="expertise__group">
-                        <span class="expertise__label">Sectores & escala</span>
-                        <ul class="pills">
-                            <li>Retail multi-país</li>
-                            <li>Moda · Mascotas · Perfumería</li>
-                            <li>25 – 135 países</li>
-                            <li>Empresas familiares y grupos</li>
-                        </ul>
-                    </div>
-                </div>
+                <ul class="value">
+                    <li><strong>Estrategia.</strong> Alineo IT con el plan de negocio desde el Comité de Dirección.</li>
+                    <li><strong>Construcción.</strong> Levanto departamentos IT desde cero y escalo equipos.</li>
+                    <li><strong>Retail internacional.</strong> 25 años en moda, mascotas y perfumería — operación 25–135 países.</li>
+                </ul>
             </section>
 
             <hr class="divider">
