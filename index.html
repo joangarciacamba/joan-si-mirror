@@ -148,35 +148,41 @@
             .sidebar__inner { padding: 4rem 3rem 4rem 3.5rem; }
         }
 
-        /* Language switcher */
+        /* Language switcher (flags) */
         .lang-switch {
             display: inline-flex;
             align-items: center;
             gap: 0.4rem;
-            font-family: var(--mono);
-            font-size: 0.7rem;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
             margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            line-height: 1;
         }
         .lang-switch a, .lang-switch span {
-            color: var(--muted);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             text-decoration: none;
-            transition: color .2s ease;
-            padding: 0.25rem 0.4rem;
-            border-radius: 3px;
+            padding: 0.25rem 0.45rem;
+            border-radius: 6px;
+            transition: all .2s ease;
+            border: 1px solid transparent;
+        }
+        .lang-switch a {
+            opacity: 0.4;
+            filter: grayscale(0.7);
+            cursor: pointer;
         }
         .lang-switch a:hover {
-            color: var(--c);
+            opacity: 1;
+            filter: none;
             background: var(--surface);
+            border-color: var(--border);
         }
         .lang-switch .active {
-            color: var(--text);
-            font-weight: 700;
-        }
-        .lang-switch .sep {
-            color: var(--border);
-            padding: 0;
+            opacity: 1;
+            filter: none;
+            border-color: var(--border);
+            background: var(--surface);
         }
 
         /* Brand tag */
@@ -780,9 +786,8 @@
 
             <section class="section section--head">
                 <nav class="lang-switch" aria-label="Idioma">
-                    <span class="active" aria-current="true">ES</span>
-                    <span class="sep">·</span>
-                    <a href="/en/" hreflang="en" lang="en">EN</a>
+                    <span class="active" aria-current="true" title="Español" aria-label="Español">🇪🇸</span>
+                    <a href="/en/" hreflang="en" lang="en" title="English" aria-label="English">🇬🇧</a>
                 </nav>
                 <div class="brandtag">Informatico_de_si</div>
                 <h1 class="name">Joan <span class="name__accent">Garcia Camba</span></h1>
