@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>JOAN GARCIA CAMBA</title>
-    <meta name="description" content="CIO/CTO en Brownie Spain (Barcelona). Tecnología como palanca de negocio: liderazgo de equipos IT con visión estratégica, foco en cliente y resultados.">
+    <meta name="description" content="CIO en retail internacional. 25 años convirtiendo IT en palanca de negocio. Brownie, Miscota, Equivalenza — equipos de 10 a 25 personas, omnicanalidad, transformación digital.">
     <link rel="canonical" href="https://www.joan.si">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" content="#006a94">
@@ -14,8 +14,8 @@
     <meta property="og:site_name" content="Joan Garcia Camba">
     <meta property="og:locale" content="es_ES">
     <meta property="og:url" content="https://www.joan.si">
-    <meta property="og:title" content="JOAN GARCIA CAMBA">
-    <meta property="og:description" content="CIO/CTO en Brownie Spain (Barcelona). Tecnología como palanca de negocio: liderazgo de equipos IT con visión estratégica, foco en cliente y resultados.">
+    <meta property="og:title" content="Joan Garcia Camba — CIO en retail internacional">
+    <meta property="og:description" content="25 años convirtiendo IT en palanca de negocio. Brownie · Miscota · Equivalenza.">
     <meta property="og:image" content="https://www.joan.si/img/og-1200.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1694">
@@ -23,8 +23,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joan Garcia Camba — CIO/CTO">
-    <meta name="twitter:description" content="CIO/CTO en Brownie Spain (Barcelona). Tecnología como palanca de negocio.">
+    <meta name="twitter:title" content="Joan Garcia Camba — CIO en retail internacional">
+    <meta name="twitter:description" content="25 años convirtiendo IT en palanca de negocio.">
     <meta name="twitter:image" content="https://www.joan.si/img/og-1200.jpg">
 
     <!-- Structured data: Person -->
@@ -50,7 +50,9 @@
       "alumniOf": [
         { "@type": "EducationalOrganization", "name": "BarcelonaTech (UPC)" },
         { "@type": "EducationalOrganization", "name": "ESADE Business School" },
-        { "@type": "EducationalOrganization", "name": "IESE Business School" }
+        { "@type": "EducationalOrganization", "name": "IESE Business School" },
+        { "@type": "EducationalOrganization", "name": "London Business School" },
+        { "@type": "EducationalOrganization", "name": "MIT" }
       ],
       "sameAs": ["https://es.linkedin.com/in/joangarcia"]
     }
@@ -68,12 +70,12 @@
             --accent: #9a4825;
             --accent-soft: #fdf1ec;
             --text: #1a1f2c;
-            --muted: #6b7280;
+            --muted: #5b6472;
             --border: #e8eaed;
             --surface: #f7f8fa;
             --bg: #fff;
+            --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
             --radius: 0.5rem;
-            --radius-sm: 0.25rem;
             --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
             --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
@@ -104,10 +106,7 @@
         }
 
         @media (min-width: 768px) {
-            .profile {
-                flex-direction: row;
-                align-items: flex-start;
-            }
+            .profile { flex-direction: row; align-items: flex-start; }
         }
 
         .photo { width: 100%; }
@@ -134,35 +133,30 @@
         .sidebar { width: 100%; }
 
         @media (min-width: 768px) {
-            .sidebar {
-                flex: 1 1 58%;
-                max-width: 58%;
-            }
+            .sidebar { flex: 1 1 58%; max-width: 58%; }
         }
 
         .sidebar__inner {
             padding: 2rem 1.5rem;
-            max-width: 640px;
+            max-width: 680px;
         }
 
         @media (min-width: 768px) {
-            .sidebar__inner {
-                padding: 4rem 3rem 4rem 3.5rem;
-            }
+            .sidebar__inner { padding: 4rem 3rem 4rem 3.5rem; }
         }
 
-        /* Brand tag — replaces the old "# IT_Yes" awkwardness */
+        /* Brand tag */
         .brandtag {
             display: inline-flex;
             align-items: center;
-            font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+            font-family: var(--mono);
             font-size: 0.7rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--accent);
             background: var(--accent-soft);
-            padding: 0.35rem 0.65rem;
+            padding: 0.35rem 0.7rem;
             border-radius: 999px;
             margin-bottom: 1.5rem;
             line-height: 1;
@@ -171,7 +165,7 @@
         .brandtag::before {
             content: '#';
             margin-right: 0.35rem;
-            opacity: 0.6;
+            opacity: 0.55;
         }
 
         /* Name */
@@ -184,9 +178,7 @@
             line-height: 1.05;
         }
 
-        @media (min-width: 768px) {
-            .name { font-size: 3rem; }
-        }
+        @media (min-width: 768px) { .name { font-size: 3rem; } }
 
         .name__accent { color: var(--c); }
 
@@ -194,9 +186,10 @@
         .headline {
             font-size: 1.05rem;
             font-weight: 400;
-            margin: 0 0 2rem;
+            margin: 0 0 1.75rem;
             color: var(--muted);
-            line-height: 1.5;
+            line-height: 1.55;
+            max-width: 38ch;
         }
 
         .headline strong {
@@ -208,7 +201,13 @@
         .section { margin-bottom: 2.5rem; }
         .section:last-child { margin-bottom: 0; }
 
-        /* CTA */
+        /* CTA group */
+        .cta-group {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+
         .btn {
             display: inline-flex;
             align-items: center;
@@ -231,6 +230,19 @@
             box-shadow: var(--shadow-md);
         }
 
+        .btn--ghost {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+            box-shadow: none;
+        }
+
+        .btn--ghost:hover {
+            background: var(--surface);
+            color: var(--c);
+            border-color: var(--c);
+        }
+
         .btn__icon {
             width: 16px;
             height: 16px;
@@ -241,12 +253,51 @@
 
         /* Section heading */
         .subtitle {
+            font-family: var(--mono);
             font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
+            font-weight: 600;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
-            margin: 0 0 1rem;
+            margin: 0 0 1.25rem;
             color: var(--muted);
+        }
+
+        /* Stats */
+        .stats {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        @media (min-width: 640px) {
+            .stats { grid-template-columns: repeat(4, 1fr); }
+        }
+
+        .stats li {
+            padding: 1rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .stat__num {
+            display: block;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--c);
+            letter-spacing: -0.02em;
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+
+        .stat__label {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--muted);
+            line-height: 1.35;
         }
 
         /* Bio */
@@ -254,13 +305,168 @@
             margin: 0 0 0.85rem;
             font-size: 1rem;
             color: var(--text);
+            line-height: 1.65;
         }
 
         .section--bio p:last-child { margin-bottom: 0; }
 
-        .section--bio p:first-child {
-            font-size: 1.05rem;
+        /* Timeline */
+        .timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timeline > li {
+            margin-bottom: 1.75rem;
+            padding-left: 1.25rem;
+            border-left: 2px solid var(--border);
+            position: relative;
+        }
+
+        .timeline > li::before {
+            content: '';
+            position: absolute;
+            left: -5px;
+            top: 0.4rem;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--c);
+        }
+
+        .timeline > li:last-child { margin-bottom: 0; }
+
+        .timeline__years {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            color: var(--muted);
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline__role {
+            font-size: 1.0625rem;
+            font-weight: 600;
+            display: block;
             color: var(--text);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline__role-company { color: var(--c); }
+
+        .timeline__meta {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--muted);
+            margin-bottom: 0.55rem;
+        }
+
+        .timeline p {
+            margin: 0;
+            font-size: 0.94rem;
+            line-height: 1.55;
+            color: var(--text);
+        }
+
+        /* Expertise */
+        .expertise { display: flex; flex-direction: column; gap: 1.1rem; }
+
+        .expertise__group { display: flex; flex-direction: column; gap: 0.5rem; }
+
+        .expertise__label {
+            font-family: var(--mono);
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+        }
+
+        .pills {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+        }
+
+        .pills li {
+            font-size: 0.83rem;
+            padding: 0.35rem 0.7rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            color: var(--text);
+        }
+
+        /* Education list */
+        .education {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
+        }
+
+        @media (min-width: 520px) {
+            .education { grid-template-columns: 1fr 1fr; }
+        }
+
+        .education li {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .edu__year {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+            margin-bottom: 0.15rem;
+        }
+
+        .edu__school {
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.35;
+        }
+
+        .edu__detail {
+            font-size: 0.82rem;
+            color: var(--muted);
+            line-height: 1.4;
+            margin-top: 0.1rem;
+        }
+
+        /* Activities */
+        .activities {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .activities li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.94rem;
+            line-height: 1.5;
+        }
+
+        .activities li:last-child { border-bottom: 0; padding-bottom: 0; }
+        .activities li:first-child { padding-top: 0; }
+
+        .activities strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .activities .activity__detail {
+            color: var(--muted);
         }
 
         /* Gallery */
@@ -294,31 +500,6 @@
             transform: translateY(-2px);
             box-shadow: var(--shadow-md);
         }
-
-        /* Meta (Trabajo / Educación) */
-        .meta {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
-        }
-
-        .meta__item p {
-            margin: 0.2rem 0;
-            font-size: 0.95rem;
-            color: var(--text);
-        }
-
-        .meta__item a {
-            color: var(--text);
-            text-decoration: none;
-            border-bottom: 1px solid var(--border);
-            transition: border-color .2s ease;
-        }
-
-        .meta__item a:hover { border-bottom-color: var(--c); }
 
         /* Divider */
         .divider {
@@ -368,6 +549,41 @@
             font-weight: 600;
         }
 
+        /* Philosophy quotes */
+        .quotes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.85rem;
+        }
+
+        @media (min-width: 600px) {
+            .quotes { grid-template-columns: 1fr 1fr; }
+        }
+
+        .quote {
+            margin: 0;
+            padding: 1rem 1.1rem;
+            background: var(--surface);
+            border-radius: var(--radius);
+            border-left: 3px solid var(--c);
+        }
+
+        .quote p {
+            margin: 0 0 0.5rem;
+            font-style: italic;
+            font-size: 0.92rem;
+            color: var(--text);
+            line-height: 1.55;
+        }
+
+        .quote cite {
+            font-size: 0.78rem;
+            color: var(--muted);
+            font-style: normal;
+            font-family: var(--mono);
+            letter-spacing: 0.04em;
+        }
+
         /* Social */
         .social {
             list-style: none;
@@ -406,6 +622,17 @@
             flex-shrink: 0;
         }
 
+        .languages {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin: 1rem 0 0;
+        }
+
+        .languages strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
         /* Footer */
         .footer {
             margin-top: 3rem;
@@ -413,6 +640,17 @@
             border-top: 1px solid var(--border);
             font-size: 0.8rem;
             color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .footer__mark {
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
         }
 
         .visually-hidden {
@@ -427,85 +665,28 @@
             border: 0;
         }
 
-        .section--gallery, .section--bio, .section--meta, .section--testimonials, .section--social {
+        .section--gallery, .section--bio, .section--meta, .section--testimonials,
+        .section--social, .section--experience, .section--expertise,
+        .section--education, .section--activities, .section--philosophy {
             content-visibility: auto;
             contain-intrinsic-size: auto 1000px auto 600px;
         }
 
-        /* Lightbox (unchanged behaviour) */
-        .lb {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, .92);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity .25s, visibility .25s;
-        }
-
+        /* Lightbox */
+        .lb { position: fixed; inset: 0; z-index: 1000; background: rgba(0, 0, 0, .92); display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s; }
         .lb--open { opacity: 1; visibility: visible; }
-
-        .lb__img {
-            max-width: 90vw;
-            max-height: 90vh;
-            object-fit: contain;
-            border-radius: .25rem;
-            opacity: 0;
-            transition: opacity .3s;
-        }
-
+        .lb__img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: .25rem; opacity: 0; transition: opacity .3s; }
         .lb__img--loaded { opacity: 1; }
-
-        .lb__spinner {
-            position: absolute;
-            width: 36px;
-            height: 36px;
-            border: 3px solid rgba(255, 255, 255, .2);
-            border-top-color: #fff;
-            border-radius: 50%;
-            animation: lb-spin .7s linear infinite;
-        }
-
+        .lb__spinner { position: absolute; width: 36px; height: 36px; border: 3px solid rgba(255, 255, 255, .2); border-top-color: #fff; border-radius: 50%; animation: lb-spin .7s linear infinite; }
         .lb__spinner--hidden { display: none; }
-
         @keyframes lb-spin { to { transform: rotate(360deg); } }
-
-        .lb__btn {
-            position: absolute;
-            background: none;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            padding: .75rem;
-            opacity: .7;
-            transition: opacity .2s;
-        }
-
+        .lb__btn { position: absolute; background: none; border: none; color: #fff; cursor: pointer; padding: .75rem; opacity: .7; transition: opacity .2s; }
         .lb__btn:hover { opacity: 1; }
-
         .lb__close { top: .75rem; right: .75rem; font-size: 2rem; line-height: 1; }
-
-        .lb__prev, .lb__next {
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 2.5rem;
-            line-height: 1;
-        }
-
+        .lb__prev, .lb__next { top: 50%; transform: translateY(-50%); font-size: 2.5rem; line-height: 1; }
         .lb__prev { left: .5rem; }
         .lb__next { right: .5rem; }
-
-        .lb__counter {
-            position: absolute;
-            bottom: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            color: rgba(255, 255, 255, .7);
-            font-size: .875rem;
-        }
+        .lb__counter { position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, .7); font-size: .875rem; }
 
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
@@ -543,39 +724,206 @@
         <div class="sidebar__inner">
 
             <section class="section section--head">
-                <div class="brandtag">IT_Yes</div>
+                <div class="brandtag">Informatico_de_si</div>
                 <h1 class="name">Joan <span class="name__accent">Garcia Camba</span></h1>
-                <p class="headline"><strong>CIO / CTO</strong> en Barcelona. Padre y emprendedor.</p>
+                <p class="headline"><strong>CIO en retail internacional.</strong> 25 años convirtiendo IT en palanca de negocio.</p>
 
-                <a href="/files/ResumeSPA.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                    Leer mi CV
-                    <svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </a>
+                <div class="cta-group">
+                    <a href="/files/ResumeSPA.pdf" target="_blank" rel="noopener noreferrer" class="btn">
+                        Leer mi CV
+                        <svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:me@joan.si" class="btn btn--ghost">Hablemos</a>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--stats" aria-label="Logros clave">
+                <h2 class="subtitle">Logros</h2>
+                <ul class="stats">
+                    <li>
+                        <span class="stat__num">25+</span>
+                        <span class="stat__label">años liderando IT, de técnico a CIO</span>
+                    </li>
+                    <li>
+                        <span class="stat__num">3</span>
+                        <span class="stat__label">mandatos CIO consecutivos en retail</span>
+                    </li>
+                    <li>
+                        <span class="stat__num">1.000+</span>
+                        <span class="stat__label">tiendas gestionadas (acumulado)</span>
+                    </li>
+                    <li>
+                        <span class="stat__num">−43%</span>
+                        <span class="stat__label">tiempo de deploy tras migración cloud</span>
+                    </li>
+                </ul>
             </section>
 
             <hr class="divider">
 
             <section class="section section--bio">
                 <p>Apasionado de la informática, emprendedor y curioso. Necesito sentir que aprendo y mejoro a diario para guiar a mi equipo con el mejor criterio hacia el éxito.</p>
-                <p>Excelente visión de cliente, con foco en el éxito de los proyectos, liderando con el ejemplo y cuidando el ambiente de trabajo.</p>
                 <p>Quiero demostrar que IT puede y debe ser una palanca para impulsar el negocio: menos problemas, más soluciones y beneficios.</p>
             </section>
 
             <hr class="divider">
 
-            <section class="section section--meta">
-                <ul class="meta">
-                    <li class="meta__item">
-                        <h2 class="subtitle">Trabajo</h2>
-                        <p><a href="https://browniespain.com" target="_blank" rel="noopener noreferrer">Brownie Spain</a></p>
+            <section class="section section--experience">
+                <h2 class="subtitle">Experiencia</h2>
+                <ol class="timeline">
+                    <li>
+                        <span class="timeline__years">2022 — hoy</span>
+                        <span class="timeline__role">CIO en <span class="timeline__role-company">Brownie</span></span>
+                        <span class="timeline__meta">Fashion retail · 120 tiendas internacional · Equipo de 14 · Comité de Dirección</span>
+                        <p>Creación y escalado del departamento de IT desde cero. Estabilización del core tecnológico, implantación de gobierno IT y modelo de proveedores. Impulso de capacidades de data y reporting para dirección. Modernización de sistemas para soportar omnicanalidad y crecimiento retail.</p>
                     </li>
-                    <li class="meta__item">
-                        <h2 class="subtitle">Educación</h2>
-                        <p>BarcelonaTech (UPC) — School of Mathematics and Statistics</p>
-                        <p>ESADE Business School</p>
-                        <p>IESE Business School</p>
+                    <li>
+                        <span class="timeline__years">2020 — 2022</span>
+                        <span class="timeline__role">CIO en <span class="timeline__role-company">Miscota</span></span>
+                        <span class="timeline__meta">Pet retail · 135 países · Equipo 6 → 25 · Reporte a CEO</span>
+                        <p>Redimensionamiento del departamento de 6 a 25 personas. Uptime de e-commerce del 100%. Transición a plataforma cloud con CI/CD que redujo los tiempos de despliegue un 43%. Gestión de equipo de 20 desarrolladores con metodología Agile. Migración a omnicanal real.</p>
+                    </li>
+                    <li>
+                        <span class="timeline__years">2012 — 2019</span>
+                        <span class="timeline__role">CIO en <span class="timeline__role-company">Equivalenza</span></span>
+                        <span class="timeline__meta">Perfumería retail · 800 puntos venta · 25 países · Equipo de 10</span>
+                        <p>Creación del departamento de informática. Implementación del ERP SageX3 (con Deloitte), BI QlikView, CRM Microsoft Dynamics y SGA Ulises-Seidor. Transformación del almacén manual en sistema automatizado.</p>
+                    </li>
+                    <li>
+                        <span class="timeline__years">1999 — 2012</span>
+                        <span class="timeline__role">Trayectoria técnica</span>
+                        <span class="timeline__meta">Telefónica · Amena · Metropol Records · Cohimar · SGO</span>
+                        <p>De técnico de sistemas a responsable de IT, asumiendo sucesivamente más responsabilidad en empresas progresivamente más grandes.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--expertise">
+                <h2 class="subtitle">Áreas de expertise</h2>
+                <div class="expertise">
+                    <div class="expertise__group">
+                        <span class="expertise__label">Liderazgo</span>
+                        <ul class="pills">
+                            <li>Comité de Dirección</li>
+                            <li>Equipos IT 10–25</li>
+                            <li>Gobierno IT</li>
+                            <li>Gestión de proveedores</li>
+                            <li>Gestión del cambio</li>
+                            <li>Visión estratégica</li>
+                        </ul>
+                    </div>
+                    <div class="expertise__group">
+                        <span class="expertise__label">Sistemas core</span>
+                        <ul class="pills">
+                            <li>ERP rollouts</li>
+                            <li>SageX3</li>
+                            <li>Microsoft Dynamics CRM</li>
+                            <li>SGA Ulises-Seidor</li>
+                        </ul>
+                    </div>
+                    <div class="expertise__group">
+                        <span class="expertise__label">Datos & BI</span>
+                        <ul class="pills">
+                            <li>QlikView</li>
+                            <li>Reporting ejecutivo</li>
+                            <li>Capacidades de data</li>
+                        </ul>
+                    </div>
+                    <div class="expertise__group">
+                        <span class="expertise__label">Cloud &amp; DevOps</span>
+                        <ul class="pills">
+                            <li>Migraciones cloud</li>
+                            <li>CI / CD</li>
+                            <li>Omnicanalidad</li>
+                            <li>Agile</li>
+                        </ul>
+                    </div>
+                    <div class="expertise__group">
+                        <span class="expertise__label">Sectores</span>
+                        <ul class="pills">
+                            <li>Retail moda</li>
+                            <li>Retail mascotas</li>
+                            <li>Perfumería</li>
+                            <li>Telco</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--education">
+                <h2 class="subtitle">Formación</h2>
+                <ul class="education">
+                    <li>
+                        <span class="edu__year">2024</span>
+                        <span class="edu__school">London Business School</span>
+                        <span class="edu__detail">The Business of AI</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2022</span>
+                        <span class="edu__school">IESE Business School</span>
+                        <span class="edu__detail">Programa Desarrollo Directivo (PDD)</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2022</span>
+                        <span class="edu__school">UNIR</span>
+                        <span class="edu__detail">Resolución de Problemas Complejos</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2021</span>
+                        <span class="edu__school">MIT</span>
+                        <span class="edu__detail">Cloud &amp; DevOps</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2018</span>
+                        <span class="edu__school">IESE Business School</span>
+                        <span class="edu__detail">Gestión de personas, equipos y liderazgo (3 cursos)</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2017</span>
+                        <span class="edu__school">ESADE Business School</span>
+                        <span class="edu__detail">Executive Master in Digital Business</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2010</span>
+                        <span class="edu__school">BarcelonaTech (UPC)</span>
+                        <span class="edu__detail">Ingeniería Informática</span>
+                    </li>
+                    <li>
+                        <span class="edu__year">2010</span>
+                        <span class="edu__school">Microsoft &amp; Cisco</span>
+                        <span class="edu__detail">2 MCP, 2 CCNA</span>
+                    </li>
+                </ul>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--activities">
+                <h2 class="subtitle">Otras actividades</h2>
+                <ul class="activities">
+                    <li>
+                        <strong>CLUTX IT Solutions</strong>
+                        <span class="activity__detail"> — Consultoría IT propia.</span>
+                    </li>
+                    <li>
+                        <strong>La Salle URL</strong>
+                        <span class="activity__detail"> — Profesor del Master de Tecnología («Gestió de Serveis TIC»).</span>
+                    </li>
+                    <li>
+                        <strong>ESADE Solidario</strong>
+                        <span class="activity__detail"> — Consultor voluntario para entidades sin ánimo de lucro.</span>
+                    </li>
+                    <li>
+                        <strong>Voluntariado</strong>
+                        <span class="activity__detail"> — Socio de Cruz Roja, ACNUR, UNICEF e Intermón. Miembro de MENSA.</span>
                     </li>
                 </ul>
             </section>
@@ -589,55 +937,37 @@
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g6-64.avif 1x, /img/gallery/g6-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g6-64.webp 1x, /img/gallery/g6-128.webp 2x">
-                            <img src="/img/gallery/g6-64.jpg"
-                                 srcset="/img/gallery/g6-64.jpg 1x, /img/gallery/g6-128.jpg 2x" alt="Foto 6"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g6-64.jpg" srcset="/img/gallery/g6-64.jpg 1x, /img/gallery/g6-128.jpg 2x" alt="Foto 6" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-1-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g1-64.avif 1x, /img/gallery/g1-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g1-64.webp 1x, /img/gallery/g1-128.webp 2x">
-                            <img src="/img/gallery/g1-64.jpg"
-                                 srcset="/img/gallery/g1-64.jpg 1x, /img/gallery/g1-128.jpg 2x" alt="Foto 1"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g1-64.jpg" srcset="/img/gallery/g1-64.jpg 1x, /img/gallery/g1-128.jpg 2x" alt="Foto 1" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-2-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g2-64.avif 1x, /img/gallery/g2-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g2-64.webp 1x, /img/gallery/g2-128.webp 2x">
-                            <img src="/img/gallery/g2-64.jpg"
-                                 srcset="/img/gallery/g2-64.jpg 1x, /img/gallery/g2-128.jpg 2x" alt="Foto 2"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g2-64.jpg" srcset="/img/gallery/g2-64.jpg 1x, /img/gallery/g2-128.jpg 2x" alt="Foto 2" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-3-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g3-64.avif 1x, /img/gallery/g3-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g3-64.webp 1x, /img/gallery/g3-128.webp 2x">
-                            <img src="/img/gallery/g3-64.jpg"
-                                 srcset="/img/gallery/g3-64.jpg 1x, /img/gallery/g3-128.jpg 2x" alt="Foto 3"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g3-64.jpg" srcset="/img/gallery/g3-64.jpg 1x, /img/gallery/g3-128.jpg 2x" alt="Foto 3" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-4-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g4-64.avif 1x, /img/gallery/g4-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g4-64.webp 1x, /img/gallery/g4-128.webp 2x">
-                            <img src="/img/gallery/g4-64.jpg"
-                                 srcset="/img/gallery/g4-64.jpg 1x, /img/gallery/g4-128.jpg 2x" alt="Foto 4"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g4-64.jpg" srcset="/img/gallery/g4-64.jpg 1x, /img/gallery/g4-128.jpg 2x" alt="Foto 4" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-5-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g5-64.avif 1x, /img/gallery/g5-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g5-64.webp 1x, /img/gallery/g5-128.webp 2x">
-                            <img src="/img/gallery/g5-64.jpg"
-                                 srcset="/img/gallery/g5-64.jpg 1x, /img/gallery/g5-128.jpg 2x" alt="Foto 5"
-                                 class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async"
-                                 fetchpriority="low"></picture>
+                            <img src="/img/gallery/g5-64.jpg" srcset="/img/gallery/g5-64.jpg 1x, /img/gallery/g5-128.jpg 2x" alt="Foto 5" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                 </ul>
             </section>
@@ -662,6 +992,22 @@
 
             <hr class="divider">
 
+            <section class="section section--philosophy">
+                <h2 class="subtitle">Filosofía</h2>
+                <div class="quotes">
+                    <blockquote class="quote">
+                        <p>«La vida no es esperar a que pase la tormenta, es aprender a bailar bajo la lluvia.»</p>
+                        <cite>Vivien Greene</cite>
+                    </blockquote>
+                    <blockquote class="quote">
+                        <p>«Lo difícil se hace, lo imposible se intenta.»</p>
+                        <cite>Napoleón Bonaparte</cite>
+                    </blockquote>
+                </div>
+            </section>
+
+            <hr class="divider">
+
             <section class="section section--social">
                 <h2 class="subtitle">Contacto</h2>
                 <ul class="social">
@@ -682,10 +1028,12 @@
                         </a>
                     </li>
                 </ul>
+                <p class="languages"><strong>Idiomas:</strong> Español &amp; Catalán (nativo) · Inglés (proficient)</p>
             </section>
 
             <footer class="footer">
-                <p>© 2026 Joan Garcia Camba · Barcelona</p>
+                <span>© 2026 Joan Garcia Camba</span>
+                <span class="footer__mark">Barcelona</span>
             </footer>
         </div>
     </div>
