@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>JOAN GARCIA CAMBA</title>
-    <meta name="description" content="CIO en retail internacional. 25 años convirtiendo IT en palanca de negocio. Brownie, Miscota, Equivalenza — equipos de 10 a 25 personas, omnicanalidad, transformación digital.">
-    <link rel="canonical" href="https://www.joan.si">
+    <title>JOAN GARCIA CAMBA — CIO in international retail</title>
+    <meta name="description" content="CIO in international retail. 25 years turning IT into a business lever. Brownie · Miscota · Equivalenza — fashion, pet and perfumery retail at 25–135 country scale.">
+    <link rel="canonical" href="https://www.joan.si/en/">
     <link rel="alternate" hreflang="es" href="https://www.joan.si/">
     <link rel="alternate" hreflang="en" href="https://www.joan.si/en/">
     <link rel="alternate" hreflang="x-default" href="https://www.joan.si/">
@@ -15,10 +15,11 @@
 
     <!-- Open Graph -->
     <meta property="og:site_name" content="Joan Garcia Camba">
-    <meta property="og:locale" content="es_ES">
-    <meta property="og:url" content="https://www.joan.si">
-    <meta property="og:title" content="Joan Garcia Camba — CIO en retail internacional">
-    <meta property="og:description" content="25 años convirtiendo IT en palanca de negocio. Brownie · Miscota · Equivalenza.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:url" content="https://www.joan.si/en/">
+    <meta property="og:title" content="Joan Garcia Camba — CIO in international retail">
+    <meta property="og:description" content="25 years turning IT into a business lever. Brownie · Miscota · Equivalenza.">
     <meta property="og:image" content="https://www.joan.si/img/og-1200.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="1694">
@@ -26,8 +27,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Joan Garcia Camba — CIO en retail internacional">
-    <meta name="twitter:description" content="25 años convirtiendo IT en palanca de negocio.">
+    <meta name="twitter:title" content="Joan Garcia Camba — CIO in international retail">
+    <meta name="twitter:description" content="25 years turning IT into a business lever.">
     <meta name="twitter:image" content="https://www.joan.si/img/og-1200.jpg">
 
     <!-- Structured data: Person -->
@@ -37,7 +38,7 @@
       "@type": "Person",
       "name": "Joan Garcia Camba",
       "jobTitle": "CIO / CTO",
-      "url": "https://www.joan.si",
+      "url": "https://www.joan.si/en/",
       "image": "https://www.joan.si/img/og-1200.jpg",
       "email": "mailto:me@joan.si",
       "address": {
@@ -223,7 +224,7 @@
             margin: 0 0 1.75rem;
             color: var(--muted);
             line-height: 1.55;
-            max-width: 38ch;
+            max-width: 40ch;
         }
 
         .headline strong {
@@ -344,6 +345,27 @@
 
         .section--bio p:last-child { margin-bottom: 0; }
 
+        /* Value (How I add value) */
+        .value {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .value li {
+            padding: 0.7rem 0;
+            font-size: 0.98rem;
+            line-height: 1.55;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+        }
+        .value li:last-child { border-bottom: 0; padding-bottom: 0; }
+        .value li:first-child { padding-top: 0; }
+        .value strong {
+            color: var(--c);
+            font-weight: 600;
+            margin-right: 0.3rem;
+        }
+
         /* Timeline */
         .timeline {
             list-style: none;
@@ -396,65 +418,6 @@
             font-size: 0.82rem;
             color: var(--muted);
             margin-bottom: 0.55rem;
-        }
-
-        .timeline p {
-            margin: 0;
-            font-size: 0.94rem;
-            line-height: 1.55;
-            color: var(--text);
-        }
-
-        /* Value (Cómo aporto valor) */
-        .value {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .value li {
-            padding: 0.7rem 0;
-            font-size: 0.98rem;
-            line-height: 1.55;
-            color: var(--text);
-            border-bottom: 1px solid var(--border);
-        }
-        .value li:last-child { border-bottom: 0; padding-bottom: 0; }
-        .value li:first-child { padding-top: 0; }
-        .value strong {
-            color: var(--c);
-            font-weight: 600;
-            margin-right: 0.3rem;
-        }
-
-        /* Expertise (kept for fallback) */
-        .expertise { display: flex; flex-direction: column; gap: 1.1rem; }
-
-        .expertise__group { display: flex; flex-direction: column; gap: 0.5rem; }
-
-        .expertise__label {
-            font-family: var(--mono);
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--muted);
-        }
-
-        .pills {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
-        }
-
-        .pills li {
-            font-size: 0.83rem;
-            padding: 0.35rem 0.7rem;
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 999px;
-            color: var(--text);
         }
 
         /* Education list */
@@ -604,7 +567,7 @@
             font-weight: 600;
         }
 
-        /* Philosophy quotes */
+        /* Philosophy */
         .quotes {
             display: grid;
             grid-template-columns: 1fr;
@@ -720,8 +683,8 @@
             border: 0;
         }
 
-        .section--gallery, .section--bio, .section--meta, .section--testimonials,
-        .section--social, .section--experience, .section--expertise, .section--value,
+        .section--gallery, .section--bio, .section--testimonials,
+        .section--social, .section--experience, .section--value,
         .section--education, .section--activities, .section--philosophy {
             content-visibility: auto;
             contain-intrinsic-size: auto 1000px auto 600px;
@@ -767,7 +730,7 @@
                         src="/img/hero-800.jpg"
                         srcset="/img/hero-800.jpg 752w, /img/hero-1600.jpg 1504w"
                         sizes="(min-width: 768px) 42vw, 100vw"
-                        alt="Retrato de Joan Garcia Camba"
+                        alt="Portrait of Joan Garcia Camba"
                         class="photo__image"
                         width="752" height="1130"
                         decoding="async" fetchpriority="high" loading="eager">
@@ -779,46 +742,46 @@
         <div class="sidebar__inner">
 
             <section class="section section--head">
-                <nav class="lang-switch" aria-label="Idioma">
-                    <span class="active" aria-current="true">ES</span>
+                <nav class="lang-switch" aria-label="Language">
+                    <a href="/" hreflang="es" lang="es">ES</a>
                     <span class="sep">·</span>
-                    <a href="/en/" hreflang="en" lang="en">EN</a>
+                    <span class="active" aria-current="true">EN</span>
                 </nav>
                 <div class="brandtag">Informatico_de_si</div>
                 <h1 class="name">Joan <span class="name__accent">Garcia Camba</span></h1>
-                <p class="headline"><strong>CIO en retail internacional.</strong> 25 años convirtiendo IT en palanca de negocio.</p>
+                <p class="headline"><strong>CIO in international retail.</strong> 25 years turning IT into a business lever.</p>
 
                 <div class="cta-group">
-                    <a href="/files/ResumeSPA.pdf" target="_blank" rel="noopener noreferrer" class="btn">
-                        Leer mi CV
+                    <a href="/files/ResumeENG.pdf" target="_blank" rel="noopener noreferrer" class="btn">
+                        Read my CV
                         <svg class="btn__icon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
                             <path d="M3 8h10M9 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </a>
-                    <a href="mailto:me@joan.si" class="btn btn--ghost">Hablemos</a>
+                    <a href="mailto:me@joan.si" class="btn btn--ghost">Get in touch</a>
                 </div>
             </section>
 
             <hr class="divider">
 
-            <section class="section section--stats" aria-label="Logros clave">
-                <h2 class="subtitle">Logros</h2>
+            <section class="section section--stats" aria-label="Key numbers">
+                <h2 class="subtitle">Highlights</h2>
                 <ul class="stats">
                     <li>
                         <span class="stat__num">25+</span>
-                        <span class="stat__label">años liderando IT, de técnico a CIO</span>
+                        <span class="stat__label">years leading IT, from technician to CIO</span>
                     </li>
                     <li>
                         <span class="stat__num">3</span>
-                        <span class="stat__label">mandatos CIO consecutivos en retail</span>
+                        <span class="stat__label">consecutive CIO roles in retail</span>
                     </li>
                     <li>
-                        <span class="stat__num">1.000+</span>
-                        <span class="stat__label">tiendas gestionadas (acumulado)</span>
+                        <span class="stat__num">1,000+</span>
+                        <span class="stat__label">stores managed (cumulative)</span>
                     </li>
                     <li>
                         <span class="stat__num">+50</span>
-                        <span class="stat__label">personas en equipos IT a lo largo de la carrera</span>
+                        <span class="stat__label">people led across IT teams in my career</span>
                     </li>
                 </ul>
             </section>
@@ -826,53 +789,53 @@
             <hr class="divider">
 
             <section class="section section--bio">
-                <p>Apasionado de la informática, emprendedor y curioso. Necesito sentir que aprendo y mejoro a diario para guiar a mi equipo con el mejor criterio hacia el éxito.</p>
-                <p>Quiero demostrar que IT puede y debe ser una palanca para impulsar el negocio: menos problemas, más soluciones y beneficios.</p>
+                <p>Passionate about IT, entrepreneurial and curious. I need to feel I learn and improve every day so I can guide my team with the best judgement towards success.</p>
+                <p>I want to prove that IT can and must be a lever to drive business: fewer problems, more solutions, more results.</p>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--value">
+                <h2 class="subtitle">How I add value</h2>
+                <ul class="value">
+                    <li><strong>Strategy.</strong> I align IT with the business plan from the Executive Committee.</li>
+                    <li><strong>Leadership.</strong> I lead the IT function — teams, vendors and transformation.</li>
+                    <li><strong>International retail.</strong> 25 years in fashion, pet and perfumery — operations across 25–135 countries.</li>
+                </ul>
             </section>
 
             <hr class="divider">
 
             <section class="section section--experience">
-                <h2 class="subtitle">Experiencia</h2>
+                <h2 class="subtitle">Experience</h2>
                 <ol class="timeline">
                     <li>
-                        <span class="timeline__years">2022 — hoy</span>
-                        <span class="timeline__role">CIO en <span class="timeline__role-company">Brownie</span></span>
-                        <span class="timeline__meta">Fashion retail · 120 tiendas internacional · Equipo de 14 · Comité de Dirección</span>
+                        <span class="timeline__years">2022 — present</span>
+                        <span class="timeline__role">CIO at <span class="timeline__role-company">Brownie</span></span>
+                        <span class="timeline__meta">Fashion retail · 120 international stores · Team of 14 · Executive Committee</span>
                     </li>
                     <li>
                         <span class="timeline__years">2020 — 2022</span>
-                        <span class="timeline__role">CIO en <span class="timeline__role-company">Miscota</span></span>
-                        <span class="timeline__meta">Pet retail · 135 países · Equipo 6 → 25 · Reporte a CEO</span>
+                        <span class="timeline__role">CIO at <span class="timeline__role-company">Miscota</span></span>
+                        <span class="timeline__meta">Pet retail · 135 countries · Team 6 → 25 · Reporting to CEO</span>
                     </li>
                     <li>
                         <span class="timeline__years">2012 — 2019</span>
-                        <span class="timeline__role">CIO en <span class="timeline__role-company">Equivalenza</span></span>
-                        <span class="timeline__meta">Perfumería retail · 800 puntos venta · 25 países · Equipo de 10</span>
+                        <span class="timeline__role">CIO at <span class="timeline__role-company">Equivalenza</span></span>
+                        <span class="timeline__meta">Perfumery retail · 800 sales points · 25 countries · Team of 10</span>
                     </li>
                     <li>
                         <span class="timeline__years">1999 — 2012</span>
-                        <span class="timeline__role">Trayectoria técnica</span>
-                        <span class="timeline__meta">De técnico de sistemas a responsable de IT</span>
+                        <span class="timeline__role">Technical track</span>
+                        <span class="timeline__meta">From systems technician to IT lead</span>
                     </li>
                 </ol>
             </section>
 
             <hr class="divider">
 
-            <section class="section section--value">
-                <h2 class="subtitle">Cómo aporto valor</h2>
-                <ul class="value">
-                    <li><strong>Estrategia.</strong> Alineo IT con el plan de negocio desde el Comité de Dirección.</li>
-                    <li><strong>Liderazgo.</strong> Dirijo la función IT — equipos, proveedores y transformación.</li>
-                    <li><strong>Retail internacional.</strong> 25 años en moda, mascotas y perfumería — operación 25–135 países.</li>
-                </ul>
-            </section>
-
-            <hr class="divider">
-
             <section class="section section--education">
-                <h2 class="subtitle">Formación</h2>
+                <h2 class="subtitle">Education</h2>
                 <ul class="education">
                     <li>
                         <span class="edu__year">2024</span>
@@ -882,12 +845,12 @@
                     <li>
                         <span class="edu__year">2022</span>
                         <span class="edu__school">IESE Business School</span>
-                        <span class="edu__detail">Programa Desarrollo Directivo (PDD)</span>
+                        <span class="edu__detail">Executive Development Programme (PDD)</span>
                     </li>
                     <li>
                         <span class="edu__year">2022</span>
                         <span class="edu__school">UNIR</span>
-                        <span class="edu__detail">Resolución de Problemas Complejos</span>
+                        <span class="edu__detail">Complex Problem Solving</span>
                     </li>
                     <li>
                         <span class="edu__year">2021</span>
@@ -897,7 +860,7 @@
                     <li>
                         <span class="edu__year">2018</span>
                         <span class="edu__school">IESE Business School</span>
-                        <span class="edu__detail">Gestión de personas, equipos y liderazgo (3 cursos)</span>
+                        <span class="edu__detail">People &amp; team management, leadership (3 courses)</span>
                     </li>
                     <li>
                         <span class="edu__year">2017</span>
@@ -907,12 +870,12 @@
                     <li>
                         <span class="edu__year">2010</span>
                         <span class="edu__school">BarcelonaTech (UPC)</span>
-                        <span class="edu__detail">Ingeniería Informática</span>
+                        <span class="edu__detail">Computer Engineering</span>
                     </li>
                     <li>
                         <span class="edu__year">2010</span>
                         <span class="edu__school">Microsoft &amp; Cisco</span>
-                        <span class="edu__detail">2 MCP, 2 CCNA</span>
+                        <span class="edu__detail">2 × MCP, 2 × CCNA</span>
                     </li>
                 </ul>
             </section>
@@ -920,67 +883,67 @@
             <hr class="divider">
 
             <section class="section section--activities">
-                <h2 class="subtitle">Otras actividades</h2>
+                <h2 class="subtitle">Other activities</h2>
                 <ul class="activities">
                     <li>
                         <strong>CLUTX IT Solutions</strong>
-                        <span class="activity__detail"> — Consultoría IT propia.</span>
+                        <span class="activity__detail"> — My own IT consulting firm.</span>
                     </li>
                     <li>
                         <strong>La Salle URL</strong>
-                        <span class="activity__detail"> — Profesor del Master de Tecnología («Gestió de Serveis TIC»).</span>
+                        <span class="activity__detail"> — Lecturer on the Master in Technology (“IT Service Management”).</span>
                     </li>
                     <li>
                         <strong>ESADE Solidario</strong>
-                        <span class="activity__detail"> — Consultor voluntario para entidades sin ánimo de lucro.</span>
+                        <span class="activity__detail"> — Pro-bono consultant for non-profit organisations.</span>
                     </li>
                     <li>
-                        <strong>Voluntariado</strong>
-                        <span class="activity__detail"> — Socio de Cruz Roja, ACNUR, UNICEF e Intermón. Miembro de MENSA.</span>
+                        <strong>Volunteering</strong>
+                        <span class="activity__detail"> — Member of Red Cross, UNHCR, UNICEF and Intermón Oxfam. MENSA member.</span>
                     </li>
                 </ul>
             </section>
 
             <hr class="divider">
 
-            <section class="section section--gallery" aria-label="Galería de fotos">
-                <h2 class="subtitle">Galería</h2>
+            <section class="section section--gallery" aria-label="Photo gallery">
+                <h2 class="subtitle">Gallery</h2>
                 <ul class="gallery">
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-6-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g6-64.avif 1x, /img/gallery/g6-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g6-64.webp 1x, /img/gallery/g6-128.webp 2x">
-                            <img src="/img/gallery/g6-64.jpg" srcset="/img/gallery/g6-64.jpg 1x, /img/gallery/g6-128.jpg 2x" alt="Foto 6" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g6-64.jpg" srcset="/img/gallery/g6-64.jpg 1x, /img/gallery/g6-128.jpg 2x" alt="Photo 6" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-1-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g1-64.avif 1x, /img/gallery/g1-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g1-64.webp 1x, /img/gallery/g1-128.webp 2x">
-                            <img src="/img/gallery/g1-64.jpg" srcset="/img/gallery/g1-64.jpg 1x, /img/gallery/g1-128.jpg 2x" alt="Foto 1" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g1-64.jpg" srcset="/img/gallery/g1-64.jpg 1x, /img/gallery/g1-128.jpg 2x" alt="Photo 1" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-2-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g2-64.avif 1x, /img/gallery/g2-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g2-64.webp 1x, /img/gallery/g2-128.webp 2x">
-                            <img src="/img/gallery/g2-64.jpg" srcset="/img/gallery/g2-64.jpg 1x, /img/gallery/g2-128.jpg 2x" alt="Foto 2" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g2-64.jpg" srcset="/img/gallery/g2-64.jpg 1x, /img/gallery/g2-128.jpg 2x" alt="Photo 2" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-3-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g3-64.avif 1x, /img/gallery/g3-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g3-64.webp 1x, /img/gallery/g3-128.webp 2x">
-                            <img src="/img/gallery/g3-64.jpg" srcset="/img/gallery/g3-64.jpg 1x, /img/gallery/g3-128.jpg 2x" alt="Foto 3" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g3-64.jpg" srcset="/img/gallery/g3-64.jpg 1x, /img/gallery/g3-128.jpg 2x" alt="Photo 3" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-4-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g4-64.avif 1x, /img/gallery/g4-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g4-64.webp 1x, /img/gallery/g4-128.webp 2x">
-                            <img src="/img/gallery/g4-64.jpg" srcset="/img/gallery/g4-64.jpg 1x, /img/gallery/g4-128.jpg 2x" alt="Foto 4" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g4-64.jpg" srcset="/img/gallery/g4-64.jpg 1x, /img/gallery/g4-128.jpg 2x" alt="Photo 4" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                     <li class="gallery__item"><a href="/img/gallery/joan-garcia-gallery-5-x2.jpg" class="gallery__link">
                         <picture>
                             <source type="image/avif" srcset="/img/gallery/g5-64.avif 1x, /img/gallery/g5-128.avif 2x">
                             <source type="image/webp" srcset="/img/gallery/g5-64.webp 1x, /img/gallery/g5-128.webp 2x">
-                            <img src="/img/gallery/g5-64.jpg" srcset="/img/gallery/g5-64.jpg 1x, /img/gallery/g5-128.jpg 2x" alt="Foto 5" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
+                            <img src="/img/gallery/g5-64.jpg" srcset="/img/gallery/g5-64.jpg 1x, /img/gallery/g5-128.jpg 2x" alt="Photo 5" class="gallery__thumb" width="64" height="64" loading="lazy" decoding="async" fetchpriority="low"></picture>
                     </a></li>
                 </ul>
             </section>
@@ -988,33 +951,33 @@
             <hr class="divider">
 
             <section class="section section--testimonials">
-                <h2 class="subtitle">Testimonios</h2>
+                <h2 class="subtitle">Testimonials</h2>
                 <blockquote class="testimonial">
-                    <p>Como especialista IT, Joan ha mostrado gran capacidad analítica, entendimiento de las necesidades del cliente y habilidad para proponer e implementar soluciones innovadoras y eficaces.</p>
-                    <div class="testimonial__author"><strong>Pere Carbó De Cala</strong> — Director de Ventas Iberia y LatAm en DIAsource ImmunoA</div>
+                    <p>As an IT specialist, Joan has shown great analytical capacity, an understanding of client needs and the ability to propose and implement innovative and effective solutions.</p>
+                    <div class="testimonial__author"><strong>Pere Carbó De Cala</strong> — Sales Director Iberia &amp; LatAm at DIAsource ImmunoA</div>
                 </blockquote>
                 <blockquote class="testimonial">
-                    <p>Joan es una persona comprometida con su trabajo y con la empresa. Como Director del Departamento IT lidera los procesos de cambio tecnológico con innovación y visión estratégica.</p>
-                    <div class="testimonial__author"><strong>Carmina San Julián Ferrer</strong> — Directora de RRHH &amp; RSC en Grupo Saona</div>
+                    <p>Joan is committed to his work and to the company. As Head of the IT Department he leads technology change with innovation and strategic vision.</p>
+                    <div class="testimonial__author"><strong>Carmina San Julián Ferrer</strong> — HR &amp; CSR Director at Grupo Saona</div>
                 </blockquote>
                 <blockquote class="testimonial">
-                    <p>Tuve la oportunidad de conocer a Joan durante el Master in Digital Business de ESADE. Es un gran profesional, orientado al cliente y capaz de aplicar la tecnología a la resolución de retos de negocio.</p>
-                    <div class="testimonial__author"><strong>Albert Almajano</strong> — CIO B. Braun</div>
+                    <p>I had the chance to meet Joan during the ESADE Master in Digital Business. He is a great professional, client-oriented and able to apply technology to solve business challenges.</p>
+                    <div class="testimonial__author"><strong>Albert Almajano</strong> — CIO at B. Braun</div>
                 </blockquote>
             </section>
 
             <hr class="divider">
 
             <section class="section section--philosophy">
-                <h2 class="subtitle">Filosofía</h2>
+                <h2 class="subtitle">Philosophy</h2>
                 <div class="quotes">
                     <blockquote class="quote">
-                        <p>«La vida no es esperar a que pase la tormenta, es aprender a bailar bajo la lluvia.»</p>
+                        <p>“Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.”</p>
                         <cite>Vivien Greene</cite>
                     </blockquote>
                     <blockquote class="quote">
-                        <p>«Lo difícil se hace, lo imposible se intenta.»</p>
-                        <cite>Napoleón Bonaparte</cite>
+                        <p>“The difficult we do at once; the impossible we attempt.”</p>
+                        <cite>Napoleon Bonaparte</cite>
                     </blockquote>
                 </div>
             </section>
@@ -1022,10 +985,10 @@
             <hr class="divider">
 
             <section class="section section--social">
-                <h2 class="subtitle">Contacto</h2>
+                <h2 class="subtitle">Contact</h2>
                 <ul class="social">
                     <li class="social__item">
-                        <a href="mailto:me@joan.si" class="social__link" title="Envíame un mensaje">
+                        <a href="mailto:me@joan.si" class="social__link" title="Send me a message">
                             <svg viewBox="0 2 37 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" fill="currentColor">
                                 <path d="M17.986 17.744L35.956 4.25C35.956 3 34.958 2 33.71 2H2.263C1.015 2 .017 3 .017 4.25l17.97 13.494zm0 4.04L.016 8.29l.062 21.462C.078 31 1.076 32 2.324 32h31.447c1.248 0 2.246-1 2.246-2.25l-.06-21.46-17.97 13.494z"></path>
                             </svg>
@@ -1041,7 +1004,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="languages"><strong>Idiomas:</strong> Español &amp; Catalán (nativo) · Inglés (proficient)</p>
+                <p class="languages"><strong>Languages:</strong> Spanish &amp; Catalan (native) · English (proficient)</p>
             </section>
 
             <footer class="footer">
@@ -1052,12 +1015,12 @@
     </div>
 </main>
 
-<div class="lb" id="lb" role="dialog" aria-label="Visor de fotos" aria-hidden="true">
+<div class="lb" id="lb" role="dialog" aria-label="Photo viewer" aria-hidden="true">
     <div class="lb__spinner" id="lb-spinner"></div>
     <img class="lb__img" id="lb-img" alt="">
-    <button class="lb__btn lb__close" id="lb-close" aria-label="Cerrar">&times;</button>
-    <button class="lb__btn lb__prev" id="lb-prev" aria-label="Anterior">&#8249;</button>
-    <button class="lb__btn lb__next" id="lb-next" aria-label="Siguiente">&#8250;</button>
+    <button class="lb__btn lb__close" id="lb-close" aria-label="Close">&times;</button>
+    <button class="lb__btn lb__prev" id="lb-prev" aria-label="Previous">&#8249;</button>
+    <button class="lb__btn lb__next" id="lb-next" aria-label="Next">&#8250;</button>
     <div class="lb__counter" id="lb-counter"></div>
 </div>
 
