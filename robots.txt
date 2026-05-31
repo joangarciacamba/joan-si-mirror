@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://joan.si/sitemap.xml
+Sitemap: https://www.joan.si/sitemap.xml
