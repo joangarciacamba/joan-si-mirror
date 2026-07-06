@@ -445,6 +445,69 @@
             color: var(--text);
         }
 
+        /* Blog / Posts */
+        .posts {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .posts > li {
+            border-bottom: 1px solid var(--border);
+        }
+        .posts > li:first-child {
+            border-top: 1px solid var(--border);
+        }
+        .post-link {
+            display: block;
+            padding: 1rem 0;
+            text-decoration: none;
+            color: inherit;
+            transition: padding .2s ease;
+        }
+        .post-link:hover {
+            padding-left: 0.5rem;
+        }
+        .post__meta {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.35rem;
+        }
+        .post__title {
+            display: block;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 0.4rem;
+            transition: color .2s ease;
+        }
+        .post-link:hover .post__title { color: var(--c); }
+        .post__excerpt {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .posts__more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.25rem;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--c);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+        .posts__more:hover { color: var(--c-d); }
+
         /* Value (Cómo aporto valor) */
         .value {
             list-style: none;
@@ -762,7 +825,7 @@
 
         .section--gallery, .section--bio, .section--meta, .section--testimonials,
         .section--social, .section--experience, .section--expertise, .section--value,
-        .section--education, .section--activities, .section--philosophy {
+        .section--education, .section--activities, .section--philosophy, .section--blog {
             content-visibility: auto;
             contain-intrinsic-size: auto 1000px auto 600px;
         }
@@ -867,6 +930,45 @@
             <section class="section section--bio">
                 <p>Soy <strong>Joan Garcia Camba</strong>, <strong>CIO en retail</strong> internacional con 25 años de experiencia. Apasionado de la informática, emprendedor y curioso. Necesito sentir que aprendo y mejoro a diario para guiar a mi equipo con el mejor criterio hacia el éxito.</p>
                 <p>Quiero demostrar que IT puede y debe ser una palanca para impulsar el negocio: menos problemas, más soluciones y beneficios.</p>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--blog">
+                <h2 class="subtitle">Blog</h2>
+                <ul class="posts">
+                    <li>
+                        <a href="https://joan-garcia.com/la-economia-de-los-tokens-cuanto-cuesta-de-verdad-la-ia-en-tu-empresa/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jul 2026 · IA · Retail</span>
+                            <span class="post__title">La economía de los tokens: cuánto cuesta de verdad la IA en tu empresa</span>
+                            <span class="post__excerpt">La IA no se compra, se consume. Qué es un token, por qué el éxito te sube la factura y cómo no llevarte sustos cuando el piloto se convierte en despliegue.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/como-no-acabar-en-el-90-de-proyectos-de-ia-que-fracasan/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jul 2026 · IA · Estrategia</span>
+                            <span class="post__title">Cómo no acabar en el 90% de proyectos de IA que fracasan</span>
+                            <span class="post__excerpt">Nueve de cada diez proyectos de IA no llegan a nada, y casi nunca es por la tecnología. Método concreto para decidir dónde aplicar IA y dónde no.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/la-ia-en-el-retail-espanol-el-hype-y-lo-que-de-verdad-mueve-la-aguja/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jun 2026 · IA · Retail</span>
+                            <span class="post__title">La IA en el retail español: el hype y lo que de verdad mueve la aguja</span>
+                            <span class="post__excerpt">La distancia entre los titulares sobre IA en retail y lo que pasa un martes por la mañana. Lo que es humo, lo que mueve la aguja, y por qué el cuello de botella casi nunca es el modelo.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/de-experto-tecnico-a-business-partner-lo-que-nadie-te-cuenta-del-salto/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jun 2026 · Liderazgo</span>
+                            <span class="post__title">De experto técnico a business partner: lo que nadie te cuenta del salto</span>
+                            <span class="post__excerpt">Lo que aprendí dando el salto de ser «el que lo arregla todo» a sentarme en la mesa donde se decide el negocio. Reflexiones a partir de mi charla en el BEE360.</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://joan-garcia.com" target="_blank" rel="noopener noreferrer" class="posts__more">
+                    Ver todos los artículos en joan-garcia.com →
+                </a>
             </section>
 
             <hr class="divider">

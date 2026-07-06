@@ -385,6 +385,78 @@
 
         .section--bio p:last-child { margin-bottom: 0; }
 
+        /* Blog / Posts */
+        .posts {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .posts > li {
+            border-bottom: 1px solid var(--border);
+        }
+        .posts > li:first-child {
+            border-top: 1px solid var(--border);
+        }
+        .post-link {
+            display: block;
+            padding: 1rem 0;
+            text-decoration: none;
+            color: inherit;
+            transition: padding .2s ease;
+        }
+        .post-link:hover {
+            padding-left: 0.5rem;
+        }
+        .post__meta {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.35rem;
+        }
+        .post__title {
+            display: block;
+            font-size: 1.02rem;
+            font-weight: 600;
+            color: var(--text);
+            line-height: 1.4;
+            margin-bottom: 0.4rem;
+            transition: color .2s ease;
+        }
+        .post-link:hover .post__title { color: var(--c); }
+        .post__excerpt {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .posts__more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-top: 1.25rem;
+            font-family: var(--mono);
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--c);
+            font-weight: 600;
+            text-decoration: none;
+            transition: color .2s ease;
+        }
+        .posts__more:hover { color: var(--c-d); }
+        .posts__lang-note {
+            display: block;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            color: var(--muted);
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
         /* Value (How I add value) */
         .value {
             list-style: none;
@@ -725,7 +797,7 @@
 
         .section--gallery, .section--bio, .section--testimonials,
         .section--social, .section--experience, .section--value,
-        .section--education, .section--activities, .section--philosophy {
+        .section--education, .section--activities, .section--philosophy, .section--blog {
             content-visibility: auto;
             contain-intrinsic-size: auto 1000px auto 600px;
         }
@@ -841,6 +913,46 @@
                     <li><strong>Leadership.</strong> I lead the IT function — teams, vendors and transformation.</li>
                     <li><strong>International retail.</strong> 25 years in fashion, pet and perfumery — operations across 25–135 countries.</li>
                 </ul>
+            </section>
+
+            <hr class="divider">
+
+            <section class="section section--blog">
+                <h2 class="subtitle">Blog</h2>
+                <span class="posts__lang-note">Articles are written in Spanish</span>
+                <ul class="posts">
+                    <li>
+                        <a href="https://joan-garcia.com/la-economia-de-los-tokens-cuanto-cuesta-de-verdad-la-ia-en-tu-empresa/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jul 2026 · AI · Retail</span>
+                            <span class="post__title">La economía de los tokens: cuánto cuesta de verdad la IA en tu empresa</span>
+                            <span class="post__excerpt">On AI as a consumable, not a purchase — what a token is, why success raises your bill, and how to avoid surprises when a pilot moves to production.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/como-no-acabar-en-el-90-de-proyectos-de-ia-que-fracasan/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jul 2026 · AI · Strategy</span>
+                            <span class="post__title">Cómo no acabar en el 90% de proyectos de IA que fracasan</span>
+                            <span class="post__excerpt">Nine out of ten AI projects fail — and rarely because of the technology. A concrete method to decide where to apply AI and where not to.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/la-ia-en-el-retail-espanol-el-hype-y-lo-que-de-verdad-mueve-la-aguja/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jun 2026 · AI · Retail</span>
+                            <span class="post__title">La IA en el retail español: el hype y lo que de verdad mueve la aguja</span>
+                            <span class="post__excerpt">The gap between AI headlines in retail and what actually happens on a Tuesday morning. What's noise, what moves the needle, and why the bottleneck is almost never the model.</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://joan-garcia.com/de-experto-tecnico-a-business-partner-lo-que-nadie-te-cuenta-del-salto/" target="_blank" rel="noopener noreferrer" class="post-link">
+                            <span class="post__meta">Jun 2026 · Leadership</span>
+                            <span class="post__title">De experto técnico a business partner: lo que nadie te cuenta del salto</span>
+                            <span class="post__excerpt">Lessons from the jump from being «the one who fixes it» to sitting at the table where business decisions are made. Notes from my talk at BEE360.</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="https://joan-garcia.com" target="_blank" rel="noopener noreferrer" class="posts__more">
+                    See all articles on joan-garcia.com →
+                </a>
             </section>
 
             <hr class="divider">
